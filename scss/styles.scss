@@ -1,0 +1,278 @@
+/*nav*/
+@import "mixins";
+@import "variables";
+
+.nav {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  #flex-container-nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    .nav_link {
+      margin: 10px 20px 10px 30px;
+      font-size: 20px;
+      font-family: $fuente;
+      color: $color;
+
+      .nav__color {
+        color: $color;
+      }
+    }
+  }
+}
+
+/*inicio*/
+
+body {
+  background-image: url("../img/background4.jpg");
+  background-color: rgb(50, 2, 85);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: $color;
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1320px;
+    padding: 40px;
+
+    .titulo {
+      padding: 40px;
+      font-size: 50px;
+    }
+  }
+}
+
+.margen-p {
+  margin: 30px 20px 10px 20px;
+  padding: 40px;
+  border-style: solid;
+  font-size: 30px;
+}
+
+.subtitulo {
+  font-family: $fuente;
+  font-size: 50px;
+  text-align: center;
+}
+
+.parrafo {
+  font-family: $fuente;
+  font-size: 30px;
+  text-align: center;
+}
+
+.img {
+  @include flexCenter(center);
+  max-width: 80%;
+  box-sizing: border-box;
+}
+
+.img {
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-top: 1rem;
+  animation: from-right 1.5s ease;
+}
+
+/*mediaq img*/
+
+@keyframes from-right {
+  0% {
+    opacity: 0;
+    transform: translatex(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatex(0px);
+  }
+}
+
+/*footer*/
+
+.img_footer {
+  height: 80px;
+  width: 80px;
+}
+
+.flex-container {
+  display: flex;
+  min-height: 100px;
+}
+
+/*productos*/
+
+.container-p {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1320px;
+
+  .flex-container1 {
+    display: flex;
+  }
+}
+
+.margen-item-1 {
+  margin: 30px 30px 30px 10px;
+}
+
+.margen-item-2 {
+  margin: 30px 30px 30px 20px;
+}
+
+.margen-item-3 {
+  margin: 30px 30px 30px 20px;
+}
+
+/*button*/
+
+button {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.button {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.button:active {
+  color: #000;
+}
+
+.button:active:after {
+  background: transparent;
+}
+
+.button:before {
+  opacity: 1;
+}
+
+.button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.imgp {
+  animation: from-right 1.5s ease;
+  height: 400px;
+  width: 400px;
+}
+
+/*media*/
+
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+
+  .body {
+    background-image: none;
+    background-color: rgb(50, 2, 85);
+  }
+
+  .nav {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: auto;
+    flex-direction: column-reverse;
+
+    .nav__color {
+      font-size: 15px;
+    }
+  }
+
+  .titulo {
+    font-size: 20px;
+  }
+
+  .img2 {
+    margin-top: 0;
+    text-align: center;
+    height: 99%;
+    width: 99%;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-container1 {
+    flex-direction: column;
+  }
+  .imgp {
+    padding: 40px;
+    align-items: center;
+
+    width: 80%;
+    height: 80%;
+  }
+}

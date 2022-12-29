@@ -2,34 +2,52 @@
 @import "mixins";
 @import "variables";
 
-.nav {
-  height: 10vh;
+/*inicio*/
+
+.header {
+  background: rgb(41, 2, 59);
+
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
-  #flex-container-nav {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    .nav_link {
-      margin: 10px 20px 10px 30px;
-      font-size: 20px;
-      font-family: $fuente;
-      color: $color;
-
-      .nav__color {
-        color: $color;
-      }
-    }
+  a {
+    text-decoration: none;
+    color: white;
   }
 }
 
-/*inicio*/
+.logo {
+  padding: 30px 0 30px 100px;
+}
+
+.nav {
+  font-size: 20px;
+}
+
+.flex-container-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul {
+  margin: 20px;
+  padding: 5px;
+  list-style: none;
+}
+
+.nav ul li {
+  display: inline-block;
+}
+
+.nav ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.4s linear;
+}
+
+.nav ul li a:hover {
+  background: #a122d3;
+}
 
 body {
   background-image: url("../img/background4.jpg");
@@ -38,16 +56,18 @@ body {
   background-attachment: fixed;
   background-position: center;
   color: $color;
+  margin: 0;
 
   .container {
     width: 100%;
     margin: 0 auto;
     max-width: 1320px;
-    padding: 40px;
+    padding: 30px;
 
     .titulo {
       padding: 40px;
       font-size: 50px;
+      font-family: $fuente;
     }
   }
 }
@@ -84,6 +104,32 @@ body {
   box-sizing: border-box;
   margin-top: 1rem;
   animation: from-right 1.5s ease;
+}
+
+.title {
+  font-size: 50px;
+}
+
+.item {
+  font-size: 20px;
+}
+
+.animation {
+  overflow: hidden;
+}
+
+.imgp {
+  transition: 0.5s;
+  object-fit: cover;
+}
+
+.imgp:hover {
+  transform: scale(1.2);
+}
+
+.titulo-p {
+  font-size: 40px;
+  padding: 0;
 }
 
 /*mediaq img*/
@@ -276,3 +322,35 @@ button {
     height: 80%;
   }
 }
+
+/*
+
+.nav {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  #flex-container-nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    .nav_link {
+      margin: 10px 20px 10px 30px;
+      font-size: 20px;
+      font-family: $fuente;
+      color: $color;
+
+      .nav__color {
+        color: $color;
+      }
+    }
+  }
+}
+
+*/

@@ -83,12 +83,20 @@ body {
   font-family: $fuente;
   font-size: 50px;
   text-align: center;
+  margin: 0 200px 0 0;
+  .parrafo {
+    font-family: $fuente;
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 200px 0 0;
+  }
 }
 
 .parrafo {
   font-family: $fuente;
   font-size: 30px;
   text-align: center;
+  margin: 20px 200px 0 0;
 }
 
 .img {
@@ -123,6 +131,11 @@ body {
   object-fit: cover;
 }
 
+.imgp {
+  cursor: pointer;
+  border-radius: 10px;
+}
+
 .imgp:hover {
   transform: scale(1.2);
 }
@@ -150,6 +163,7 @@ body {
 .img_footer {
   height: 80px;
   width: 80px;
+  margin: 10px 10px 10px 10px;
 }
 
 .flex-container {

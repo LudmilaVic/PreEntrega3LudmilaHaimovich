@@ -75,12 +75,20 @@ body .container .titulo {
   font-family: "Times New Roman", Times, serif;
   font-size: 50px;
   text-align: center;
+  margin: 0 200px 0 0;
+}
+.subtitulo .parrafo {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  text-align: center;
+  margin: 20px 200px 0 0;
 }
 
 .parrafo {
   font-family: "Times New Roman", Times, serif;
   font-size: 30px;
   text-align: center;
+  margin: 20px 200px 0 0;
 }
 
 .img {
@@ -118,6 +126,11 @@ body .container .titulo {
   object-fit: cover;
 }
 
+.imgp {
+  cursor: pointer;
+  border-radius: 10px;
+}
+
 .imgp:hover {
   transform: scale(1.2);
 }
@@ -142,6 +155,7 @@ body .container .titulo {
 .img_footer {
   height: 80px;
   width: 80px;
+  margin: 10px 10px 10px 10px;
 }
 
 .flex-container {
